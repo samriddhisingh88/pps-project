@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main() {
+//RA2111003010856 SAMRIDDHI SINGH 
+  int marks[10], i, n, sum=0, score;
+  char grade;
+//input the no. of subjects
+  printf("Enter no. of subjects: ");
+  scanf("%d", &n);
+//input marks in each subject
+  for(i=0; i < n; ++i) {
+    printf("Enter marks%d: ",i+1);
+    scanf("%d", &marks[i]);
+    
+    sum += marks[i];
+  }
+//calculate score/average of all subjects
+  score = sum / n;
+  printf("Average of all subjects/score = %d\n", score);
+  
+  if(score<0 || score>100) {
+    printf("Invalid Score");
+    
+    return 0;
+   }
+
+   
+   if(score>=90 && score<=100)
+    grade = 'A';
+
+  
+   else if(score>=80)
+    grade = 'B';
+
+   
+   else if(score>=70)
+    grade = 'C';
+
+ 
+   else if(score>=60)
+    grade = 'D';
+
+  
+   else if(score>=50)
+    grade = 'E';
+
+  
+   else
+    grade = 'F';
+
+  //display grade 
+   printf("Grade: %c\n", grade);
+
+   return 0;
+}
